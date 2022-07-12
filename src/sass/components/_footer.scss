@@ -1,0 +1,21 @@
+.footer {
+  flex-direction: row;
+  position: static;
+  z-index: 99;
+  bottom: 0;
+  width: 100%;
+  padding: 3rem 0;
+  background-color: $main-bg;
+  font-size: 1.2rem;
+
+  &__logo {
+    height: 3rem;
+    border-radius: 100%;
+  }
+  &__about {
+    p {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  }
+}

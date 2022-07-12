@@ -1,0 +1,78 @@
+.section {
+  margin-bottom: 4rem;
+
+  .bank__info {
+    display: flex;
+    flex-direction: row;
+    @include tablet {
+      flex-direction: column;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      Button {
+        margin: 1rem;
+        width: 15rem;
+        @include tablet {
+          width: 12rem;
+          height: 4rem;
+        }
+      }
+    }
+
+    &__dolar {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      gap: 2rem;
+    }
+  }
+
+  table {
+    margin: auto;
+    width: 50rem;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    @include tablet {
+      width: 30rem;
+    }
+  }
+
+  th,
+  td {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $main-color;
+    font-size: larger;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  thead {
+    th {
+      background-color: $second-color;
+    }
+  }
+
+  & > * ~ * {
+    margin-top: 3rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+  }
+}
